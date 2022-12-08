@@ -2,150 +2,173 @@
 @use 'basics';
 
 .header {
-	height: 60px;
-	width: 100%;
-}
+	height: 70px;
+	width: auto;
+	background-color: white;
+	padding: 10px 0;
 
-body {
-	background-color: rgb(209, 130, 33);
+	&__logo {
+		display: block;
+		max-width: 45px;
+		margin-left: 15px ;
+	}
 }
-
 
 .menu {
-	width: 99%;
+	width: 100%;
 	display: grid;
 	grid-template-columns: 50px auto 150px;
 	position: absolute;
 	justify-content: stretch;
 	align-items: center;
+
+
+	&__checkbox {
+		position: absolute;
+		left: -9999px;
+	}
+
+	&__toggler {
+		cursor: pointer;
+		grid-column: 3/4;
+		justify-self: end;
+		margin-right: 20px;
+	}
+
+	&__list {
+		display: none;
+		margin-top: 5px;
+		padding: 0;
+		list-style: none;
+		background-color: white;
+		grid-column: 1/4;
+		}
+
+	&__item {
+		border-top: 1px solid colours.$primary;
+	}
+
+	
+	&__link {
+		display: block;
+		padding: 5px 15px 5px 0;
+		text-decoration: none;
+		text-align: center;
+		font-family: basics.$font-main;
+		color: black;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+
+/*
+	&__logo {
+		position: absolute;
+		opacity: 0;
+		padding: 0;
+		border: none;
+	}*/
+
+	&__logo2 {
+		display: none;
+	}
+
+	&__item:nth-child(3) {
+		border-top: 0;
+	}
+	
+	&__link:active{
+		background-color: rgb(194, 189, 189);
+	}
+	
+	&__checkbox:checked ~ .menu__list {
+		display: block;
+		z-index: 15;
+	}
 }
 
-.menu__checkbox {
-	position: absolute;
-	left: -9999px;
-}
-
-.menu__toggler {
-	cursor: pointer;
-	grid-column: 3/4;
-	justify-self: end;
-}
-
-.menu__list {
-	display: none;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	background-color: white;
-	grid-column: 1/4;
-}
-
-.menu__item {
-	border-bottom: 1px solid colours.$primary;
-}
-
-.menu__link {
-	display: block;
-	padding: 15px;
-	text-decoration: none;
-	text-align: center;
-	font-family: basics.$font-main;
-	color: black;
-}
-
-.header__logo {
-	display: inline-block;
-	max-width: 35px;
-	grid-column: 1/2;
-	justify-self: center;
-}
-
-.menu__logo {
-	position: absolute;
-	opacity: 0;
-	padding: 0;
-	border: none;
-}
-
-.header__logo2 {
-	display: none;
-}
-
-.menu__item:nth-child(2) {
-	border-bottom: 0ch;
-}
-
-.menu__link:active{
-	background-color: rgb(194, 189, 189);
-}
-
-.menu__checkbox:checked ~ .menu__list {
-	display: block;
-}
 
 @media screen and (min-width: 480px) {
 
-.header__logo {
-	display: none;
-}
+.header {
+		display: flex;
+		align-items: center;
+
+		&__logo {
+			display: none;
+		}
+	}
+
 
 .menu {
 	display: flex;
 	justify-content: center;
-}
 
-.menu__toggler {
-	display: none;
-}
+	&__toggler {
+		display: none;
+		margin: 0;
+	}
 
-.menu__list {
-	display:flex;
-}
+	&__list {
+		display:flex;
+		align-items: center;
+		margin: 15px 0,
+	}
 
-.menu__item {
-	border-bottom: none;
-	margin: 0 20px;
-}
+	&__item {
+		border-top: none;
+		margin: 0 60px 0 0;
+	}
 
-.menu__logo {
-	display: block;
-	position: revert;
-	opacity: 100%;
-	padding: 0;
-}
-.header__logo2 {
-	display: revert;
-	display: inline-block;
-	max-width: 35px;
-	margin-bottom: -55px;
-}
+	&__item:nth-child(3){
+		width: 50px;
+	}
 
-.menu__link:active {
-	background-color: transparent;
-}
+	&__logo {
+		display: block;
+		position: revert;
+		opacity: 100%;
+		padding: 0;
+	}
+	&__logo2 {
+		display: revert;
+		position: absolute;
+		max-width: 55px;
+		z-index: 20;
+		margin-bottom: -45px;
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+	}
 
-.menu__link {
-	position: relative;
-}
+	&__link {
+		position: relative;
+		padding: 0;
+		padding: 5px 0;
+	}
 
-.menu__link:after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: black;
-	opacity: 0;
-  	transition: opacity 300ms, transform 300ms;
-	transform: scale(0);
-	transform-origin: center;
-}
+	&__link:active {
+		background-color: transparent;
+	}
 
-.menu__link:hover::after {
-	opacity: 1;
-	transform: translate3d(0, 0.2em, 0);
-	transform: scale(1);
-}
+	&__link::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: black;
+		opacity: 0;
+		transition: opacity 300ms, transform 300ms;
+		transform: scale(0);
+		transform-origin: center;
+	}
 
+	&__link:hover::after {
+		opacity: 1;
+		transform: translate3d(0, 0.2em, 0);
+		transform: scale(1);
+	}
+}
 }
