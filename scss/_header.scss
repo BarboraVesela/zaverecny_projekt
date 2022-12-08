@@ -1,0 +1,151 @@
+@use 'colours';
+@use 'basics';
+
+.header {
+	height: 60px;
+	width: 100%;
+}
+
+body {
+	background-color: rgb(209, 130, 33);
+}
+
+
+.menu {
+	width: 99%;
+	display: grid;
+	grid-template-columns: 50px auto 150px;
+	position: absolute;
+	justify-content: stretch;
+	align-items: center;
+}
+
+.menu__checkbox {
+	position: absolute;
+	left: -9999px;
+}
+
+.menu__toggler {
+	cursor: pointer;
+	grid-column: 3/4;
+	justify-self: end;
+}
+
+.menu__list {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: white;
+	grid-column: 1/4;
+}
+
+.menu__item {
+	border-bottom: 1px solid colours.$primary;
+}
+
+.menu__link {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	text-align: center;
+	font-family: basics.$font-main;
+	color: black;
+}
+
+.header__logo {
+	display: inline-block;
+	max-width: 35px;
+	grid-column: 1/2;
+	justify-self: center;
+}
+
+.menu__logo {
+	position: absolute;
+	opacity: 0;
+	padding: 0;
+	border: none;
+}
+
+.header__logo2 {
+	display: none;
+}
+
+.menu__item:nth-child(2) {
+	border-bottom: 0ch;
+}
+
+.menu__link:active{
+	background-color: rgb(194, 189, 189);
+}
+
+.menu__checkbox:checked ~ .menu__list {
+	display: block;
+}
+
+@media screen and (min-width: 480px) {
+
+.header__logo {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+}
+
+.menu__toggler {
+	display: none;
+}
+
+.menu__list {
+	display:flex;
+}
+
+.menu__item {
+	border-bottom: none;
+	margin: 0 20px;
+}
+
+.menu__logo {
+	display: block;
+	position: revert;
+	opacity: 100%;
+	padding: 0;
+}
+.header__logo2 {
+	display: revert;
+	display: inline-block;
+	max-width: 35px;
+	margin-bottom: -55px;
+}
+
+.menu__link:active {
+	background-color: transparent;
+}
+
+.menu__link {
+	position: relative;
+}
+
+.menu__link:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: black;
+	opacity: 0;
+  	transition: opacity 300ms, transform 300ms;
+	transform: scale(0);
+	transform-origin: center;
+}
+
+.menu__link:hover::after {
+	opacity: 1;
+	transform: translate3d(0, 0.2em, 0);
+	transform: scale(1);
+}
+
+}

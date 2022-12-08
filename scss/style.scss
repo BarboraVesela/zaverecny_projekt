@@ -1,18 +1,5 @@
-html { box-sizing: border-box; }
+@use 'basics';
+@use 'header';
+@use 'slider';
+@use 'colours';
 
-*, ::before, ::after { box-sizing: inherit; }
-  
-body {
-  font-family: sans-serif;
-  padding: 1em;
-}
-
-h2 {
-    margin-top: 50px;
-}
-
-
-.glide__slide img {
-  height: 500px;
-
-}
