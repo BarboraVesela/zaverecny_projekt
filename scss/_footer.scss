@@ -1,0 +1,18 @@
+@use 'colours';
+@use 'basics';
+
+.footer {
+    background-color: /*colours.$primary*/ colours.$primary;
+	color: white;
+	text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+	padding: 10px 0;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 480px) {
+    .footer {
+        font-size: 14px;
+    }
+}

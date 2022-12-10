@@ -1,0 +1,100 @@
+@use 'basics';
+@use 'colours';
+
+.contact {
+    padding: 20px;
+    text-align: center; 
+    
+    &__columnleft {
+        margin-bottom: 40px;
+    }
+
+    &__columnright {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    &__label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 10px 0 5px 0;
+    } 
+
+    &__button {
+        border: 2px solid rgb(161, 158, 158);
+        background-color: #fff;
+        padding: 3px 6px;
+        margin: 15px 0;
+        font-family: basics.$font-main;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgb(116, 113, 113);
+        }
+        
+    &__button:active {
+        background-color: colours.$primary;
+        border: 2px solid #fff;
+        color: #fff;
+    }
+
+    }
+
+input, textarea {
+        width: 80%;
+        border: 1px solid rgb(206, 200, 200);
+        font-size: 18px;
+        font-family: basics.$font-main;
+    }
+
+
+@media screen and (min-width: 480px) {
+.contact {
+    display: grid;
+    grid-template-columns:1fr 2fr 2fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 20px 30px;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+
+    &__title {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    &__columnright, 
+    &__columnleft {
+        padding: 0 20px;
+    }
+
+    &__columnleft {
+        grid-column: 2/3;
+    }
+
+    &__columnright {
+        grid-column: 3/4;
+        justify-items: center;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    input {
+        width: 60%
+    }
+}
+
+
+
+
+
+}

@@ -1,5 +1,21 @@
 ---
 layout: layouts/main.njk
-title: Main
+title: Homepage
 ---
 
+{% include 'partials/slider.njk' %}
+   
+        <script src="js/glide.min.js"></script>
+
+	  <script>
+		new Glide('.glide', {
+            <!--autoplay: 5000,-->
+			hoverpause: false,
+			perView: 1,
+			type: 'carousel',
+		}).mount()
+	  </script>
+      
+   {% include 'partials/hero.njk' %}
+   {% include 'partials/highlights.njk' %}
+   {% include 'partials/form.njk' %}

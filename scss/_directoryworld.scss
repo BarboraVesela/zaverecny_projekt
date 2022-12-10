@@ -1,0 +1,137 @@
+@use 'colours';
+@use 'basics';
+
+.world {
+    padding: 10px;
+
+    &__banner {
+        display: flex;
+        width: 100%;
+        background-color: black;
+        position: relative;
+        height: 60px;
+    
+    }
+
+    &__triangle {
+        display: none;
+    }
+
+    &__title {
+        margin: auto;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;;
+        
+    }
+
+    &__section {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    &__section::after {
+        content: "";
+	    display: block; 
+	    width: 100%; 
+        background-color: black;
+        height: 2px;
+        
+    }
+
+    &__article {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 200px;
+        width: 100%;
+        
+       
+      }
+
+    &__bar {
+        background-color:rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin: 35px 0;
+    }
+
+    &__button {
+        background-color: rgba(252, 249, 249, 0.2);
+        border: 2px solid #fff;
+        padding: 3px 6px;
+        margin-bottom: 15px;
+        font-family: basics.$font-main;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+        }
+
+        &__button:active {
+        background-color: black;
+        }
+
+    &__headline {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 18px;
+        }
+    
+    &__berglake {
+        background-image: url('/images/bt/berglake.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__cwt {
+        background-image: url('/images/cwt/cwtcover.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__jmt {
+        background-image: url('/images/jmt/garnet.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__bryce {
+        background-image: url('/images/usa/bryce2.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+@media screen and (min-width: 480px) {
+
+    .world {
+        max-width: 1800px;
+    &__banner {
+        position: relative;
+    }
+
+    &__triangle {
+        position: absolute;
+        display: revert;
+		max-width: 69px;
+		z-index: 10;
+		margin-top: -245px;
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+        fill: white;
+    }
+    }
+}
