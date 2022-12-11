@@ -59,7 +59,7 @@ body {
   grid-column: 1/4;
 }
 .menu__item {
-  border-top: 1px solid black;
+  border-top: 1px solid #202020;
 }
 .menu__link {
   display: block;
@@ -67,7 +67,7 @@ body {
   text-decoration: none;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: black;
+  color: #202020;
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -218,7 +218,7 @@ body {
 .glide__button:active {
   background-color: black;
 }
-.glide h2 {
+.glide__secondary {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
@@ -440,7 +440,7 @@ body {
   .glide__button:hover {
     background-color: black;
   }
-  h2 {
+  .glide__secondary {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
@@ -523,7 +523,7 @@ body {
   color: rgb(116, 113, 113);
 }
 .highlights__button:active {
-  background-color: black;
+  background-color: #202020;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -634,7 +634,7 @@ body {
   color: rgb(116, 113, 113);
 }
 .contact__button:active {
-  background-color: black;
+  background-color: #202020;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -672,6 +672,11 @@ input, textarea {
     grid-column: 3/4;
     justify-items: center;
   }
+  .contact__button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+  }
   .contact textarea {
     width: 100%;
   }
@@ -680,7 +685,7 @@ input, textarea {
   }
 }
 .footer {
-  background-color: black;
+  background-color: #202020;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -696,19 +701,20 @@ input, textarea {
 }
 .aboutme {
   background-color: rgb(236, 236, 230);
-  height: 600px;
+  max-height: 900px;
   padding: 40px 0;
 }
 .aboutme__content {
   height: 460px;
   background-color: white;
-  width: 70%;
+  width: 80%;
   margin: auto;
   text-align: center;
   font-size: 14px;
   line-height: 1.5;
   padding: 20px 10px 100px 10px;
   position: relative;
+  margin-bottom: 75px;
 }
 .aboutme__photo {
   position: absolute;
@@ -719,6 +725,9 @@ input, textarea {
   left: 0;
   right: 0;
   margin: auto;
+}
+.aboutme__text {
+  margin-bottom: 75px;
 }
 .aboutme__title {
   text-transform: uppercase;
@@ -732,6 +741,11 @@ input, textarea {
   .aboutme__content {
     height: 390px;
     width: 80%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .aboutme__photo {
+    width: 200px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -847,6 +861,14 @@ input, textarea {
 }
 .world__button:active {
   background-color: black;
+}
+.world__link {
+  text-decoration: none;
+  color: white;
+}
+.world__link:visited {
+  text-decoration: none;
+  color: white;
 }
 .world__headline {
   color: white;
@@ -1101,5 +1123,129 @@ input, textarea {
   }
   .gear__button:hover {
     background-color: black;
+  }
+}
+.jmt {
+  margin: 30px auto;
+  width: 80%;
+  color: #202020;
+  font-size: 16px;
+}
+.jmt__title {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.jmt__secondary {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+.jmt__snippet {
+  font-size: 20px;
+  text-align: center;
+  margin: 40px 0;
+}
+.jmt__spacer {
+  text-align: center;
+  margin: 30px 0;
+}
+.jmt__item1, .jmt__item2, .jmt__item3, .jmt__item4, .jmt__item5, .jmt__item6 {
+  margin: 20px 0;
+}
+.jmt__photos {
+  margin: 30px 0;
+}
+.jmt__photo {
+  width: 100%;
+  display: block;
+}
+.jmt__tag {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+@media screen and (min-width: 480px) {
+  .jmt {
+    font-size: 18px;
+    margin: 60px auto;
+  }
+  .jmt__title {
+    font-size: 32px;
+  }
+  .jmt__text {
+    width: 80%;
+    margin: auto;
+  }
+  .jmt__secondary {
+    font-size: 20px;
+  }
+  .jmt__snippet {
+    font-size: 22px;
+  }
+  .jmt__item1, .jmt__item2, .jmt__item3, .jmt__item4, .jmt__item5, .jmt__item6 {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
+  .jmt__photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 600px 450px 450px 600px;
+    gap: 20px;
+    margin: 50px 0;
+  }
+  .jmt__photo {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  .jmt__tag {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  .jmt__item1:hover .jmt__tag, .jmt__item2:hover .jmt__tag, .jmt__item3:hover .jmt__tag, .jmt__item4:hover .jmt__tag, .jmt__item5:hover .jmt__tag, .jmt__item6:hover .jmt__tag {
+    transform: translateY(-100%);
+  }
+  .jmt__item1 {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+  }
+  .jmt__item2 {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+  }
+  .jmt__item3 {
+    grid-column: 2/4;
+    display: flex;
+    align-items: center;
+  }
+  .jmt__item4 {
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+  }
+  .jmt__item5 {
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+  }
+  .jmt__item6 {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */

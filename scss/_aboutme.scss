@@ -2,21 +2,22 @@
 @use 'basics';
 
 .aboutme {
-
+ 
     background-color: rgb(236, 236, 230);
-    height: 600px;
+    max-height: 900px;
     padding: 40px 0;
 
     &__content {
         height: 460px;
         background-color: white;
-        width: 70%;
+        width: 80%;
         margin: auto;
         text-align: center;
         font-size: 14px;
         line-height: 1.5;
         padding: 20px 10px 100px 10px;
         position: relative;
+        margin-bottom: 75px;
     }
 
 
@@ -29,37 +30,50 @@
         left: 0;
         right: 0;
         margin: auto
-        
+    
+    }
+
+    &__text {
+        margin-bottom: 75px;
     }
 
     &__title {
         text-transform: uppercase;
         font-size: 20px;
     }
-}
+    }
 
-@media screen and (min-width:400px) {
-.aboutme {
+    @media screen and (min-width:400px) {
+    .aboutme {
     height: 600px;
 
     &__content {
         height: 390px;
         width: 80%;
     }
-}
-}
+    }
+    }
 
 
+    @media screen and (min-width:500px) {
+    .aboutme {   
+        
+        &__photo {
+            width: 200px;
+        
+        }
+    }
+    }
 
-
-@media screen and (min-width:800px) {
+    
+    @media screen and (min-width:800px) {
 
     .aboutme {
         height: auto;
         padding: 0;
         max-width: 1200px;
         margin: auto;
-    
+
         &__content {
             height: auto;
             width: 70%;
@@ -70,7 +84,7 @@
             grid-template-rows: repeat(autofill, 1fr);
 
             /*grid-template-columns: 1fr repeat(5, minmax(120px, 1fr)) 1fr;/*repeat(7, minmax(150px, 1fr));*/
-           /* grid-template-rows: 100px repeat(5, 100px) 100px;*/
+        /* grid-template-rows: 100px repeat(5, 100px) 100px;*/
             background-image: none;
             background-color: rgb(236, 236, 230);
             margin-top: 0;
@@ -107,9 +121,7 @@
         }
 
 
-        
+    
     }
-}
-
-
+    }
 

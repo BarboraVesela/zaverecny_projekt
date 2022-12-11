@@ -72,9 +72,19 @@
         color: #fff;
         }
 
-        &__button:active {
-        background-color: black;
-        }
+    &__button:active {
+    background-color: black;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: white;
+    }
+
+    &__link:visited {
+        text-decoration: none;
+        color: white;
+    }
 
     &__headline {
         color: white;

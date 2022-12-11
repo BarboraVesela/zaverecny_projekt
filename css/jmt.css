@@ -1,1 +1,38 @@
-/*# sourceMappingURL=jmt.css.map */
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.jmt {
+  margin: auto;
+  width: 80%;
+  color: #202020;
+}
+.jmt__title {
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+.jmt__secondary {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+.jmt__secondary__snippet {
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  color: aqua;
+}/*# sourceMappingURL=jmt.css.map */

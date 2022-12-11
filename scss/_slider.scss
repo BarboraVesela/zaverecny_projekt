@@ -70,7 +70,7 @@
     background-color: black;
   }
   
-  h2 {
+  &__secondary {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
@@ -297,16 +297,17 @@
  &__button:hover {
    background-color: black;
  }
+
+
+&__secondary {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+ }
  
 }
 
 
-
-h2 {
- color: white;
- text-transform: uppercase;
- font-weight: 500;
-}
 
 
 }
