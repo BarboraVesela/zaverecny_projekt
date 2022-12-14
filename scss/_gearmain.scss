@@ -70,6 +70,16 @@
         background-color: colours.$primary;
         }
 
+        &__link {
+            text-decoration: none;
+            color: white;
+        }
+
+        &__link:visited {
+            text-decoration: none;
+            color: white;
+        }
+
     &__headline {
         color: white;
         text-transform: uppercase;
@@ -128,7 +138,13 @@
     &__title {
         font-weight: 500;
         font-size: 32px;
+        
     } 
+
+    &__category {
+        margin-top: 20px;
+    }
+    
 
     &__section {
         text-transform: uppercase;
@@ -136,6 +152,7 @@
         font-size: 16px;
         margin: 10px 0;
         color: colours.$primary;
+        line-height: 1;
     }
 
     &__row {

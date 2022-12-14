@@ -10,6 +10,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
   color: #202020;
 }
 
@@ -163,369 +164,6 @@ body {
     background-color: #202020;
   }
 }
-.glide {
-  height: 250px;
-  width: 100%;
-}
-.glide__slides {
-  margin: auto;
-}
-.glide__slide {
-  margin: auto;
-}
-.glide__article1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: center;
-  height: 250px;
-  background-image: url("/images/jmt/cathedral.jpg");
-  background-color: rgb(236, 236, 230);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.glide__article2 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: center;
-  height: 250px;
-  background-image: url("/images/bt/berglake.jpg");
-  background-color: rgb(236, 236, 230);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.glide__article3 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: center;
-  height: 250px;
-  background-image: url("/images/netherlands/oisterwijkdark.jpg");
-  background-color: rgb(236, 236, 230);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.glide__bar {
-  background-color: rgba(0, 0, 0, 0.3);
-  margin-bottom: 35px;
-  width: 100%;
-}
-.glide__button {
-  background-color: rgba(252, 249, 249, 0.2);
-  border: 2px solid #fff;
-  padding: 3px 6px;
-  margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-}
-.glide__button:active {
-  background-color: #202020;
-}
-.glide__secondary {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 18px;
-}
-.glide__arrow {
-  position: absolute;
-  display: block;
-  top: 50%;
-  z-index: 2;
-  color: white;
-  text-transform: uppercase;
-  padding: 4px 7px;
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  cursor: pointer;
-  transition: opacity 150ms ease, border 300ms ease-in-out;
-  transform: translateY(-50%);
-  line-height: 1;
-}
-.glide__arrow:focus {
-  outline: none;
-}
-.glide__arrow:hover {
-  border-color: white;
-}
-.glide__arrow--left {
-  left: 1em;
-}
-.glide__arrow--right {
-  right: 1em;
-}
-.glide__arrow--disabled {
-  opacity: 0.33;
-}
-.glide__bullets {
-  position: absolute;
-  z-index: 2;
-  bottom: 1em;
-  left: 50%;
-  display: inline-flex;
-  list-style: none;
-  transform: translateX(-50%);
-}
-.glide__bullet {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 5px;
-  height: 5px;
-  padding: 0;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  transition: all 300ms ease-in-out;
-  cursor: pointer;
-  line-height: 0;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-  margin: 0 0.25em;
-}
-.glide__bullet:focus {
-  outline: none;
-}
-.glide__bullet:hover, .glide .glide__bullet:focus {
-  border: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.glide__bullet--active {
-  background-color: white;
-}
-.glide--swipeable {
-  cursor: grab;
-  cursor: -webkit-grab;
-}
-.glide--dragging {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-}
-@media screen and (min-width: 480px) {
-  .glide__arrow {
-    position: absolute;
-    display: block;
-    top: 50%;
-    z-index: 2;
-    color: white;
-    text-transform: uppercase;
-    padding: 9px 12px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    cursor: pointer;
-    transition: opacity 150ms ease, border 300ms ease-in-out;
-    transform: translateY(-50%);
-    line-height: 1;
-  }
-  .glide__arrow:focus {
-    outline: none;
-  }
-  .glide__arrow:hover {
-    border-color: white;
-  }
-  .glide__arrow--left {
-    left: 2em;
-  }
-  .glide__arrow--right {
-    right: 2em;
-  }
-  .glide__arrow--disabled {
-    opacity: 0.33;
-  }
-  .glide__bullets {
-    position: absolute;
-    z-index: 2;
-    bottom: 2em;
-    left: 50%;
-    display: inline-flex;
-    list-style: none;
-    transform: translateX(-50%);
-  }
-  .glide__bullet {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 9px;
-    height: 9px;
-    padding: 0;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
-    line-height: 0;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    margin: 0 0.25em;
-  }
-  .glide__bullet:focus {
-    outline: none;
-  }
-  .glide__bullet:hover, .glide .glide__bullet:focus {
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  .glide__bullet--active {
-    background-color: white;
-  }
-  .glide--swipeable {
-    cursor: grab;
-    cursor: -webkit-grab;
-  }
-  .glide--dragging {
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .glide {
-    height: 650px;
-    max-width: 100%;
-  }
-  .glide__slides {
-    margin: 0;
-  }
-  .glide__article1 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
-    height: 650px;
-    background-image: url("/images/jmt/cathedral.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .glide__article2 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
-    height: 650px;
-    background-image: url("/images/bt/berglake.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .glide__article3 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
-    height: 650px;
-    background-image: url("/images/netherlands/oisterwijkdark.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .glide__bar {
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    margin-bottom: 150px;
-  }
-  .glide__button {
-    background-color: rgba(252, 249, 249, 0.2);
-    border: 3px solid #fff;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #fff;
-    cursor: pointer;
-    transition-duration: 0.4s;
-  }
-  .glide__button:hover {
-    background-color: #202020;
-  }
-  .glide__secondary {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .glide__arrow {
-    position: absolute;
-    display: block;
-    top: 50%;
-    z-index: 2;
-    color: white;
-    text-transform: uppercase;
-    padding: 9px 12px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    cursor: pointer;
-    transition: opacity 150ms ease, border 300ms ease-in-out;
-    transform: translateY(-50%);
-    line-height: 1;
-  }
-  .glide__arrow:focus {
-    outline: none;
-  }
-  .glide__arrow:hover {
-    border-color: white;
-  }
-  .glide__arrow--left {
-    left: 2em;
-  }
-  .glide__arrow--right {
-    right: 2em;
-  }
-  .glide__arrow--disabled {
-    opacity: 0.33;
-  }
-  .glide__bullets {
-    position: absolute;
-    z-index: 2;
-    bottom: 2em;
-    left: 50%;
-    display: inline-flex;
-    list-style: none;
-    transform: translateX(-50%);
-  }
-  .glide__bullet {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 9px;
-    height: 9px;
-    padding: 0;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
-    line-height: 0;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    margin: 0 0.25em;
-  }
-  .glide__bullet:focus {
-    outline: none;
-  }
-  .glide__bullet:hover, .glide .glide__bullet:focus {
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  .glide__bullet--active {
-    background-color: white;
-  }
-  .glide--swipeable {
-    cursor: grab;
-    cursor: -webkit-grab;
-  }
-  .glide--dragging {
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-  }
-}
 .hero {
   display: flex;
   justify-content: center;
@@ -545,8 +183,9 @@ body {
 
 @media screen and (min-width: 480px) {
   .hero {
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 15px auto;
+    max-width: 1200px;
   }
   .hero__content {
     max-width: 70%;
@@ -574,6 +213,9 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.highlights__upper {
+  overflow: hidden;
 }
 .highlights__lower {
   padding: 10px;
@@ -612,12 +254,23 @@ body {
   margin: 5px 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
+  .highlights {
+    max-width: 60%;
+    margin: auto;
+  }
+  .highlights__upper {
+    max-height: 300px;
+  }
+}
+@media screen and (min-width: 1100px) {
   .highlights {
     display: grid;
     grid-template-columns: 1fr repeat(3, minmax(200px, 400px)) 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 20px 30px;
+    max-width: 80%;
+    margin: auto;
   }
   .highlights__title {
     grid-column: 2/3;
@@ -687,6 +340,8 @@ body {
 .contact {
   padding: 20px;
   text-align: center;
+  max-width: 80%;
+  margin: auto;
 }
 .contact__columnleft {
   margin-bottom: 40px;
@@ -788,7 +443,7 @@ input, textarea {
   padding: 40px 0;
 }
 .aboutme__content {
-  height: 480px;
+  height: 510px;
   background-color: white;
   width: 80%;
   margin: auto;
@@ -810,7 +465,7 @@ input, textarea {
   margin: auto;
 }
 .aboutme__text {
-  margin-bottom: 75px;
+  margin-bottom: 85px;
 }
 .aboutme__title {
   text-transform: uppercase;
@@ -850,7 +505,7 @@ input, textarea {
     background-image: none;
     background-color: rgb(236, 236, 230);
     margin-top: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     padding: 100px 0;
   }
@@ -877,160 +532,6 @@ input, textarea {
     border-radius: 2%;
     border: 4px solid white;
     background-color: rgb(236, 236, 230);
-  }
-}
-.world {
-  padding: 10px;
-}
-.world__banner {
-  display: flex;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  height: 60px;
-}
-.world__title {
-  margin: auto;
-  color: #202020;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 28px;
-  text-align: center;
-}
-.world__section {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  margin: 20px 0 5px 0;
-  margin-bottom: 5px;
-}
-.world__section::after {
-  content: "";
-  display: block;
-  width: 100%;
-  background-color: #202020;
-  height: 2px;
-  margin-top: 5px;
-}
-.world__article {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 200px;
-  width: 100%;
-}
-.world__bar {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  margin: 35px 0;
-}
-.world__button {
-  background-color: rgba(252, 249, 249, 0.2);
-  border: 2px solid #fff;
-  padding: 3px 6px;
-  margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  cursor: pointer;
-}
-.world__button:active {
-  background-color: #202020;
-}
-.world__link {
-  text-decoration: none;
-  color: white;
-}
-.world__link:visited {
-  text-decoration: none;
-  color: white;
-}
-.world__headline {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 18px;
-}
-.world__berglake {
-  background-image: url("/images/bt/berglake.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-.world__cwt {
-  background-image: url("/images/cwt/cwtcover.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-.world__jmt {
-  background-image: url("/images/jmt/garnet.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-.world__bryce {
-  background-image: url("/images/usa/bryce2.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-
-@media screen and (min-width: 480px) {
-  .world {
-    max-width: 1100px;
-    padding: 0;
-    margin: auto;
-    padding: 0 40px;
-  }
-  .world__banner {
-    height: 120px;
-    padding-top: 40px;
-  }
-  .world__content {
-    margin-bottom: 40px;
-  }
-  .world__background {
-    position: relative;
-  }
-  .world__title {
-    font-weight: 500;
-    font-size: 32px;
-  }
-  .world__section {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 10px 0;
-    color: #202020;
-  }
-  .world__row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  .world__section::after {
-    width: 15%;
-  }
-  .world__article {
-    min-height: 220px;
-    margin: 0;
-  }
-  .world__article:hover {
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    transition: all 0.6s;
-  }
-  .world__button:hover {
-    background-color: #202020;
   }
 }
 .gear {
@@ -1094,6 +595,14 @@ input, textarea {
 .gear__button:active {
   background-color: #202020;
 }
+.gear__link {
+  text-decoration: none;
+  color: white;
+}
+.gear__link:visited {
+  text-decoration: none;
+  color: white;
+}
 .gear__headline {
   color: white;
   text-transform: uppercase;
@@ -1143,12 +652,16 @@ input, textarea {
     font-weight: 500;
     font-size: 32px;
   }
+  .gear__category {
+    margin-top: 20px;
+  }
   .gear__section {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
     margin: 10px 0;
     color: #202020;
+    line-height: 1;
   }
   .gear__row {
     display: grid;
@@ -1171,17 +684,17 @@ input, textarea {
     background-color: #202020;
   }
 }
-.directoryworld {
+.trails {
   padding: 10px;
 }
-.directoryworld__banner {
+.trails__banner {
   display: flex;
   width: 100%;
   background-color: white;
   position: relative;
   height: 60px;
 }
-.directoryworld__title {
+.trails__title {
   margin: auto;
   color: #202020;
   text-transform: uppercase;
@@ -1189,7 +702,7 @@ input, textarea {
   font-size: 28px;
   text-align: center;
 }
-.directoryworld__secondary {
+.trails__secondary {
   margin: auto;
   color: #202020;
   text-transform: uppercase;
@@ -1197,14 +710,14 @@ input, textarea {
   font-size: 22px;
   margin: 40px 0 20px 0;
 }
-.directoryworld__section {
+.trails__section {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
   margin: 20px 0 5px 0;
   margin-bottom: 5px;
 }
-.directoryworld__section::after {
+.trails__section::after {
   content: "";
   display: block;
   width: 100%;
@@ -1212,7 +725,7 @@ input, textarea {
   height: 2px;
   margin-top: 5px;
 }
-.directoryworld__article {
+.trails__article {
   margin: 20px auto;
   display: flex;
   justify-content: center;
@@ -1221,12 +734,12 @@ input, textarea {
   height: 200px;
   width: 100%;
 }
-.directoryworld__bar {
+.trails__bar {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   margin: 35px 0;
 }
-.directoryworld__button {
+.trails__button {
   background-color: rgba(252, 249, 249, 0.2);
   border: 2px solid #fff;
   padding: 3px 6px;
@@ -1238,45 +751,45 @@ input, textarea {
   color: #fff;
   cursor: pointer;
 }
-.directoryworld__button:active {
+.trails__button:active {
   background-color: #202020;
 }
-.directoryworld__link {
+.trails__link {
   text-decoration: none;
   color: white;
 }
-.directoryworld__link:visited {
+.trails__link:visited {
   text-decoration: none;
   color: white;
 }
-.directoryworld__headline {
+.trails__headline {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 18px;
 }
-.directoryworld__berglake {
+.trails__berglake {
   background-image: url("/images/bt/berglake.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(236, 236, 230);
 }
-.directoryworld__cwt {
+.trails__cwt {
   background-image: url("/images/cwt/cwtcover.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(236, 236, 230);
 }
-.directoryworld__jmt {
+.trails__jmt {
   background-image: url("/images/jmt/garnet.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(236, 236, 230);
 }
-.directoryworld__bryce {
+.trails__bryce {
   background-image: url("/images/usa/bryce2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1285,65 +798,65 @@ input, textarea {
 }
 
 @media screen and (min-width: 480px) {
-  .directoryworld {
+  .trails {
     max-width: 1100px;
     padding: 0;
     margin: auto;
     padding: 0 40px;
   }
-  .directoryworld__banner {
+  .trails__banner {
     height: 120px;
     padding-top: 40px;
   }
-  .directoryworld__content {
+  .trails__content {
     margin-bottom: 40px;
   }
-  .directoryworld__background {
+  .trails__background {
     position: relative;
   }
-  .directoryworld__title {
+  .trails__title {
     font-weight: 500;
     font-size: 32px;
   }
-  .directoryworld__section {
+  .trails__section {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
     margin: 10px 0;
     color: #202020;
   }
-  .directoryworld__row {
+  .trails__row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
   }
-  .directoryworld__section::after {
+  .trails__section::after {
     width: 15%;
   }
-  .directoryworld__article {
+  .trails__article {
     min-height: 220px;
     margin: 0;
   }
-  .directoryworld__article:hover {
+  .trails__article:hover {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     transition: all 0.6s;
   }
-  .directoryworld__button:hover {
+  .trails__button:hover {
     background-color: #202020;
   }
 }
-.directorynl {
+.trails {
   padding: 10px;
 }
-.directorynl__banner {
+.trails__banner {
   display: flex;
   width: 100%;
   background-color: white;
   position: relative;
   height: 60px;
 }
-.directorynl__title {
+.trails__title {
   margin: auto;
   color: #202020;
   text-transform: uppercase;
@@ -1351,22 +864,20 @@ input, textarea {
   font-size: 28px;
   text-align: center;
 }
-.directorynl__section {
+.trails__section {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
-  margin: 20px 0 5px 0;
-  margin-bottom: 5px;
+  line-height: 1;
 }
-.directorynl__section::after {
+.trails__section::after {
   content: "";
   display: block;
   width: 100%;
   background-color: #202020;
   height: 2px;
-  margin-top: 5px;
 }
-.directorynl__article {
+.trails__article {
   margin: 20px auto;
   display: flex;
   justify-content: center;
@@ -1375,12 +886,12 @@ input, textarea {
   height: 200px;
   width: 100%;
 }
-.directorynl__bar {
+.trails__bar {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   margin: 35px 0;
 }
-.directorynl__button {
+.trails__button {
   background-color: rgba(252, 249, 249, 0.2);
   border: 2px solid #fff;
   padding: 3px 6px;
@@ -1392,45 +903,45 @@ input, textarea {
   color: #fff;
   cursor: pointer;
 }
-.directorynl__button:active {
+.trails__button:active {
   background-color: #202020;
 }
-.directorynl__link {
+.trails__link {
   text-decoration: none;
   color: white;
 }
-.directorynl__link:visited {
+.trails__link:visited {
   text-decoration: none;
   color: white;
 }
-.directorynl__headline {
+.trails__headline {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 18px;
 }
-.directorynl__oisterwijk {
+.trails__oisterwijk {
   background-image: url("/images/netherlands/oisterwijkdark.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(236, 236, 230);
 }
-.directorynl__schoorl {
+.trails__schoorl {
   background-image: url("/images/netherlands/schoorl3.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(236, 236, 230);
 }
-.directorynl__hoogeveluwe {
+.trails__hoogeveluwe {
   background-image: url("/images/netherlands/veluwe.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(236, 236, 230);
 }
-.directorynl__veluwezoom {
+.trails__veluwezoom {
   background-image: url("/images/netherlands/veluwezoom.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1439,211 +950,58 @@ input, textarea {
 }
 
 @media screen and (min-width: 480px) {
-  .directorynl {
+  .trails {
     max-width: 1100px;
     padding: 0;
     margin: auto;
     padding: 0 40px;
   }
-  .directorynl__banner {
+  .trails__banner {
     height: 120px;
     padding-top: 40px;
   }
-  .directorynl__content {
+  .trails__content {
     margin-bottom: 40px;
   }
-  .directorynl__background {
+  .trails__background {
     position: relative;
   }
-  .directorynl__title {
+  .trails__title {
     font-weight: 500;
     font-size: 32px;
   }
-  .directorynl__section {
+  .trails__section {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
     margin: 10px 0;
     color: #202020;
   }
-  .directorynl__row {
+  .trails__row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
   }
-  .directorynl__section::after {
+  .trails__section::after {
     width: 15%;
   }
-  .directorynl__article {
+  .trails__article {
     min-height: 220px;
     margin: 0;
   }
-  .directorynl__article:hover {
+  .trails__article:hover {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     transition: all 0.6s;
   }
-  .directorynl__button:hover {
-    background-color: #202020;
-  }
-}
-.nl {
-  padding: 10px;
-}
-.nl__banner {
-  display: flex;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  height: 60px;
-}
-.nl__title {
-  margin: auto;
-  color: #202020;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 28px;
-  text-align: center;
-}
-.nl__section {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  margin: 20px 0 5px 0;
-  margin-bottom: 5px;
-}
-.nl__section::after {
-  content: "";
-  display: block;
-  width: 100%;
-  background-color: #202020;
-  height: 2px;
-  margin-top: 5px;
-}
-.nl__article {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 200px;
-  width: 100%;
-}
-.nl__bar {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  margin: 35px 0;
-}
-.nl__button {
-  background-color: rgba(252, 249, 249, 0.2);
-  border: 2px solid #fff;
-  padding: 3px 6px;
-  margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  cursor: pointer;
-}
-.nl__button:active {
-  background-color: #202020;
-}
-.nl__link {
-  text-decoration: none;
-  color: white;
-}
-.nl__link:visited {
-  text-decoration: none;
-  color: white;
-}
-.nl__headline {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 18px;
-}
-.nl__oisterwijk {
-  background-image: url("/images/netherlands/oisterwijkdark.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-.nl__schoorl {
-  background-image: url("/images/netherlands/schoorl3.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-.nl__hoogeveluwe {
-  background-image: url("/images/netherlands/veluwe.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-.nl__veluwezoom {
-  background-image: url("/images/netherlands/veluwezoom.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(236, 236, 230);
-}
-
-@media screen and (min-width: 480px) {
-  .nl {
-    max-width: 1100px;
-    padding: 0;
-    margin: auto;
-    padding: 0 40px;
-  }
-  .nl__banner {
-    height: 120px;
-    padding-top: 40px;
-  }
-  .nl__content {
-    margin-bottom: 40px;
-  }
-  .nl__background {
-    position: relative;
-  }
-  .nl__title {
-    font-weight: 500;
-    font-size: 32px;
-  }
-  .nl__section {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 10px 0;
-    color: #202020;
-  }
-  .nl__row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  .nl__section::after {
-    width: 15%;
-  }
-  .nl__article {
-    min-height: 220px;
-    margin: 0;
-  }
-  .nl__article:hover {
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    transition: all 0.6s;
-  }
-  .nl__button:hover {
+  .trails__button:hover {
     background-color: #202020;
   }
 }
 .jmt {
   margin: 70px auto;
   width: 80%;
+  max-width: 900px;
   color: #202020;
   font-size: 16px;
 }
@@ -1659,6 +1017,12 @@ input, textarea {
   font-style: italic;
   font-weight: 300;
   font-size: 16px;
+  text-align: center;
+}
+.jmt__tertiary {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
   text-align: center;
 }
 .jmt__snippet {
@@ -1689,7 +1053,7 @@ input, textarea {
 
 @media screen and (min-width: 1300px) {
   .jmt {
-    max-width: 1200px;
+    max-width: 1300px;
     font-size: 18px;
     margin: 100px auto;
   }
@@ -1705,7 +1069,7 @@ input, textarea {
   }
   .jmt__snippet {
     font-size: 22px;
-    margin: 100px 0;
+    margin: 60px 0;
   }
   .jmt__item1, .jmt__item2, .jmt__item3, .jmt__item4, .jmt__item5, .jmt__item6 {
     position: relative;
@@ -2132,6 +1496,15 @@ input, textarea {
   font-size: 18px;
 }
 
+.glider__link {
+  text-decoration: none;
+}
+
+.glider__link:visited {
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (min-width: 480px) {
   .glider-contain {
     height: 650px !important;
@@ -2240,5 +1613,118 @@ input, textarea {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+  }
+}
+.altra {
+  margin: 70px auto;
+  width: 80%;
+  max-width: 900px;
+  color: #202020;
+  font-size: 16px;
+}
+.altra__title {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.altra__secondary {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  margin: 40px 0;
+}
+.altra__tertiary {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 40px;
+}
+.altra__spacer {
+  text-align: center;
+  margin: 30px 0;
+}
+.altra__item1, .altra__item2, .altra__item3 {
+  margin: 20px 0;
+}
+.altra__photos {
+  margin: 30px 0;
+}
+.altra__photo {
+  width: 100%;
+  display: block;
+  background-color: rgb(236, 236, 230);
+}
+.altra__tag {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+@media screen and (min-width: 1300px) {
+  .altra {
+    max-width: 1300px;
+    font-size: 18px;
+    margin: 100px auto;
+  }
+  .altra__title {
+    font-size: 32px;
+  }
+  .altra__text {
+    width: 60%;
+    margin: auto;
+  }
+  .altra__secondary {
+    font-size: 20px;
+  }
+  .altra__item1, .altra__item2, .altra__item3 {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
+  .altra__photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 550px 350px;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 1100px;
+  }
+  .altra__photo {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  .altra__tag {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  .altra__item1:hover .altra__tag, .altra__item2:hover .altra__tag, .altra__item3:hover .altra__tag {
+    transform: translateY(-100%);
+  }
+  .altra__item1 {
+    grid-column: 1/5;
+    display: flex;
+    align-items: center;
+  }
+  .altra__item2 {
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+  }
+  .altra__item3 {
+    grid-column: 3/5;
+    display: flex;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */

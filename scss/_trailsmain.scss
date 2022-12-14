@@ -1,7 +1,7 @@
 @use 'colours';
 @use 'basics';
 
-.directoryworld {
+.trails {
     padding: 10px;
 
     &__banner {
@@ -135,7 +135,7 @@
 
 @media screen and (min-width: 480px) {
 
-    .directoryworld {
+    .trails {
         max-width: 1100px;
         padding: 0;
         margin: auto;
@@ -196,7 +196,7 @@
 
 }
 
-.directorynl {
+.trails {
     padding: 10px;
 
     &__banner {
@@ -222,8 +222,7 @@
         text-transform: uppercase;
         font-weight: 400;
         font-size: 16px;
-        margin: 20px 0 5px 0;
-        margin-bottom: 5px;
+        line-height: 1;
     }
 
     &__section::after {
@@ -232,7 +231,6 @@
 	    width: 100%; 
         background-color: colours.$primary;
         height: 2px;
-        margin-top: 5px;
     }
 
     &__article {
@@ -323,7 +321,7 @@
 
 @media screen and (min-width: 480px) {
 
-    .directorynl {
+    .trails {
         max-width: 1100px;
         padding: 0;
         margin: auto;
