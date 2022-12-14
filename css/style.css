@@ -1215,6 +1215,7 @@ input, textarea {
 }
 .oisterwijk__link {
   text-decoration: none;
+  color: rgb(116, 113, 113);
 }
 .oisterwijk__link:visited {
   text-decoration: none;
