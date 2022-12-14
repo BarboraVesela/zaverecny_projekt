@@ -1,4 +1,4 @@
-<div class="glide">
+<section class="glide">
 		<div class="glide__track" data-glide-el="track">
 		  <ul class="glide__slides">
 				<li class="glide__slide">
@@ -8,7 +8,7 @@
 						<h2 class = "glide__secondary">John Muir Trail<br>
 						August 2022
 						</h2>
-						<button type="button" class= "glide__button"><a class="world__link" href="/content/world/jmt/">Read</button>
+						<button type="button" class= "glide__button"><a class="world__link" href="/content/world/jmt/">Read</a></button>
 						</div>
 					</div>
 				</li>
@@ -49,6 +49,14 @@
 		<button class="glide__bullet" data-glide-dir="=2"></button>
 	</div>
 
-</div>
+	<script src="glide.min.js"></script>
 
-	
+		<script>
+			new Glide('.glide', {
+				type: 'carousel',
+			}).mount()
+		</script>
+
+</section>
+
+

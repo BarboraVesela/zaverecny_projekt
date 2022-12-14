@@ -52,6 +52,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: rgb(116, 113, 113);
+        cursor: pointer;
       }
     
       &__button:active {
@@ -119,6 +120,7 @@
             position: relative;
             padding: 5px 0;
             margin: 0;
+            cursor: pointer;
         }
 
         &__text {
@@ -136,7 +138,7 @@
 		    left: 0;
             right: 0;
             height: 2px;
-            background-color: black;
+            background-color: colours.$primary;
             opacity: 0;
             transition: opacity 300ms, transform 300ms;
             transform: scale(0);

@@ -1,11 +1,16 @@
 @use 'basics';
+@use 'colours';
   
 .glide {
-
   height: 250px;
-  
+  width: 100%;
+
    &__slides {
-    margin: 0;
+    margin: auto;
+  }
+
+  &__slide {
+    margin: auto;
   }
 
   &__article1{
@@ -14,8 +19,8 @@
     align-items: flex-end;
     text-align: center;
     height: 250px;
-    width: 100%;
-    background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/jmt/cathedral.jpg');
+    background-image: url('/images/jmt/cathedral.jpg');
+    background-color: colours.$backgroundimg;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,8 +32,8 @@
     align-items: flex-end;
     text-align: center;
     height: 250px;
-    width: 100%;
-    background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/bt/berglake.jpg');
+    background-image: url('/images/bt/berglake.jpg');
+    background-color: colours.$backgroundimg;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,8 +46,8 @@
     align-items: flex-end;
     text-align: center;
     height: 250px;
-    width: 100%;
-    background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/netherlands/oisterwijkdark.jpg');
+    background-image: url('/images/netherlands/oisterwijkdark.jpg');
+    background-color: colours.$backgroundimg;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,8 +55,8 @@
 
   &__bar {
     background-color:rgba(0, 0, 0, 0.3);
-    width: 100%;
     margin-bottom: 35px;
+    width: 100%;
     }
 
   &__button {
@@ -67,7 +72,7 @@
   }
 
   &__button:active {
-    background-color: black;
+    background-color: colours.$primary;
   }
   
   &__secondary {
@@ -97,16 +102,16 @@
     line-height: 1; 
   }
 
-    &__arrow:focus {
-      outline: none; }
-    &__arrow:hover {
-      border-color: white; }
-      &__arrow--left {
-      left: 1em; }
-      &__arrow--right {
-      right: 1em; }
-    &__arrow--disabled {
-      opacity: 0.33; }
+  &__arrow:focus {
+    outline: none; }
+  &__arrow:hover {
+    border-color: white; }
+    &__arrow--left {
+    left: 1em; }
+    &__arrow--right {
+    right: 1em; }
+  &__arrow--disabled {
+    opacity: 0.33; }
   
   &__bullets {
     position: absolute;
@@ -149,7 +154,6 @@
   
    
   @media screen and (min-width: 480px) {
-  
       &__arrow {
           position: absolute;
           display: block;
@@ -217,98 +221,159 @@
           cursor: grabbing;
           cursor: -moz-grabbing;
           cursor: -webkit-grabbing; }
-          
   }
 
 
 }
 
 
-@media screen and (min-width: 480px) {
+    @media screen and (min-width: 480px) {
 
-.glide {
-   height: 650px;
-   max-width: 2300px;
-   margin: auto;
-    
-   &__slides {
-    margin: 0;
-   } 
+    .glide {
+      height: 650px;
+      max-width: 100%;
+        
+      &__slides {
+        margin: 0;
+      } 
 
- &__article1{
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
-   text-align: center;
-   height: 650px;
-   width: 100%;
-   background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/jmt/cathedral.jpg');
-   background-position: center top;
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+      &__article1{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 650px;
+        background-image: url('/images/jmt/cathedral.jpg');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
- &__article2{
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
-   text-align: center;
-   height: 650px;
-   width: 100%;
-   background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/bt/berglake.jpg');
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+      &__article2{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 650px;
+        background-image:  url('/images/bt/berglake.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
 
- &__article3{
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
-   text-align: center;
-   height: 650px;
-   width: 100%;
-   background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/netherlands/oisterwijkdark.jpg');
-   background-position: center top;
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+      &__article3{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 650px;
+        background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/netherlands/oisterwijkdark.jpg');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
- &__bar {
-   background-color:rgba(0, 0, 0, 0.3);
-   width: 100%;
-   margin-bottom: 150px;
-   }
+      &__bar {
+        background-color:rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin-bottom: 150px;
+        }
 
- &__button {
-   background-color: rgba(252, 249, 249, 0.2);
-   border: 3px solid #fff;
-   padding: 5px 10px;
-   margin-bottom: 20px;
-   font-family: basics.$font-main;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   color: #fff;
-   cursor: pointer;
-   transition-duration: 0.4s;
- }
+      &__button {
+        background-color: rgba(252, 249, 249, 0.2);
+        border: 3px solid #fff;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        font-family: basics.$font-main;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+        cursor: pointer;
+        transition-duration: 0.4s;
+      }
 
- &__button:hover {
-   background-color: black;
- }
-
-
-&__secondary {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
- }
- 
-}
+      &__button:hover {
+        background-color: colours.$primary;
+      }
 
 
+      &__secondary {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      &__arrow {
+        position: absolute;
+        display: block;
+        top: 50%;
+        z-index: 2;
+        color: white;
+        text-transform: uppercase;
+        padding: 9px 12px;
+        background-color: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 4px;
+        box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+        text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 150ms ease, border 300ms ease-in-out;
+        transform: translateY(-50%);
+        line-height: 1; }
+        &__arrow:focus {
+          outline: none; }
+        &__arrow:hover {
+          border-color: white; }
+        &__arrow--left {
+          left: 2em; }
+        &__arrow--right {
+          right: 2em; }
+        &__arrow--disabled {
+          opacity: 0.33; }
+
+        &__bullets {
+        position: absolute;
+        z-index: 2;
+        bottom: 2em;
+        left: 50%;
+        display: inline-flex;
+        list-style: none;
+        transform: translateX(-50%); }
+
+        &__bullet {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+        line-height: 0;
+        box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+        margin: 0 0.25em; }
+        &__bullet:focus {
+          outline: none; }
+        &__bullet:hover, .glide__bullet:focus {
+          border: 2px solid white;
+          background-color: rgba(255, 255, 255, 0.5); }
+        &__bullet--active {
+          background-color: white; }
+
+      &--swipeable {
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab; }
+
+      &--dragging {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing; }
+      }
+
+      }
 
 
-}
+
 

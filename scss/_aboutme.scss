@@ -8,7 +8,7 @@
     padding: 40px 0;
 
     &__content {
-        height: 460px;
+        height: 480px;
         background-color: white;
         width: 80%;
         margin: auto;
@@ -40,17 +40,19 @@
     &__title {
         text-transform: uppercase;
         font-size: 20px;
+        font-weight: 500;
     }
     }
 
     @media screen and (min-width:400px) {
-    .aboutme {
-    height: 600px;
+    
+        .aboutme {
+        height: 600px;
 
-    &__content {
-        height: 390px;
+        &__content {
+        height: 420px;
         width: 80%;
-    }
+        }
     }
     }
 
@@ -59,8 +61,7 @@
     .aboutme {   
         
         &__photo {
-            width: 200px;
-        
+            width: 190px;
         }
     }
     }
@@ -82,9 +83,6 @@
             display: grid;
             grid-template-columns:repeat(autofill minmax(50px,1fr));
             grid-template-rows: repeat(autofill, 1fr);
-
-            /*grid-template-columns: 1fr repeat(5, minmax(120px, 1fr)) 1fr;/*repeat(7, minmax(150px, 1fr));*/
-        /* grid-template-rows: 100px repeat(5, 100px) 100px;*/
             background-image: none;
             background-color: rgb(236, 236, 230);
             margin-top: 0;
@@ -107,7 +105,6 @@
             margin-top: 0;
             margin-bottom: 10px;
             font-weight: 500;
-            letter-spacing: 2px;
         }
 
         &__photo {
@@ -118,6 +115,7 @@
             grid-row: 2/5;
             border-radius: 2%;
             border: 4px solid white;
+            background-color: colours.$backgroundimg;
         }
 
 

@@ -1,0 +1,259 @@
+@use 'basics';
+@use 'colours';
+  
+.glider-contain {
+  width: 100%;
+  height: 250px !important;
+  position: relative;
+}
+
+.glider-next {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  z-index: 10;
+  color: white;
+  border-radius: 4px;
+  opacity: 0.6;
+  transform: scale(0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  line-height: 1;
+  }
+
+
+.glider-prev {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  z-index: 10;
+  color: white;
+  border-radius: 4px;
+  opacity: 0.6;
+  transform: scale(0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  line-height: 1;
+  }
+
+.glider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: white;
+  opacity: 0.8;
+  transform: scale(0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  line-height: 1;
+}
+
+.glider-dot.active {
+  background-color: white;
+}
+
+.glider__article1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 250px !important;
+  background-image: url('/images/jmt/cathedral.jpg');
+  background-color: colours.$backgroundimg;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.glider__article2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 250px !important;
+    background-image: url('/images/bt/berglake.jpg');
+    background-color: colours.$backgroundimg;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+
+
+.glider__article3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 250px !important;
+    background-image: url('/images/netherlands/oisterwijkdark.jpg');
+    background-color: colours.$backgroundimg;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+
+.glider__bar {
+    background-color:rgba(0, 0, 0, 0.3);
+    margin-bottom: 35px;
+    width: 100%;
+    }
+
+.glider__button {
+    background-color: rgba(252, 249, 249, 0.2);
+    border: 2px solid #fff;
+    padding: 3px 6px;
+    margin-bottom: 15px;
+    font-family: basics.$font-main;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+.glider__button:active {
+    background-color: colours.$primary;
+  }
+  
+.glider__secondary {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+
+@media screen and (min-width: 480px) {
+
+    .glider-contain {
+      height: 650px !important;
+      width: 100%;
+    }
+        
+    .glider__slides {
+        margin: 0;
+        width: 100%;
+      } 
+      .glider-next {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        z-index: 10;
+        color: white;
+        border-radius: 4px;
+        opacity: 0.6;
+        transform: scale(0.8);
+        cursor: pointer;
+        transition: opacity 150ms ease, border 300ms ease-in-out;
+        line-height: 1;
+        }
+      
+      
+      .glider-prev {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        z-index: 10;
+        color: white;
+        border-radius: 4px;
+        opacity: 0.6;
+        transform: scale(0.8);
+        cursor: pointer;
+        transition: opacity 150ms ease, border 300ms ease-in-out;
+        line-height: 1;
+        }
+      
+      .glider-dots {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        color: white;
+        opacity: 0.8;
+        transform: scale(0.8);
+        cursor: pointer;
+        transition: opacity 150ms ease, border 300ms ease-in-out;
+        line-height: 1;
+      }
+      
+      .glider-dot.active {
+        background-color: white;
+      }
+      
+    .glider__article1{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 650px !important;
+        background-image: url('/images/jmt/cathedral.jpg');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+      }
+
+    .glider__article2{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 650px !important;
+        background-image:  url('/images/bt/berglake.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+
+    .glider__article3{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+      height: 650px !important;
+      background-image:  /*linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/ url('/images/netherlands/oisterwijkdark.jpg');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .glider__bar {
+      background-color:rgba(0, 0, 0, 0.3);
+      width: 100%;
+      margin-bottom: 150px;
+      }
+
+    .glider__button {
+      background-color: rgba(252, 249, 249, 0.2);
+      border: 3px solid #fff;
+      padding: 5px 10px;
+      margin-bottom: 20px;
+      font-family: basics.$font-main;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+
+    .glider__button:hover {
+      background-color: colours.$primary;
+    }
+
+
+    .glider__secondary {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    
+    }
+  
+
+    
+
+

@@ -35,6 +35,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: rgb(116, 113, 113);
+        cursor: pointer;
         }
         
     &__button:active {
@@ -53,7 +54,7 @@ input, textarea {
     }
 
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 900px) {
 .contact {
     display: grid;
     grid-template-columns:1fr 2fr 2fr 1fr; 
@@ -85,7 +86,7 @@ input, textarea {
     }
 
     &__button:hover {
-        background-color: black;
+        background-color: colours.$primary;
         color: white;
         border: 2px solid white;
     }

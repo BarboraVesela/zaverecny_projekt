@@ -1,0 +1,308 @@
+@use 'basics';
+@use 'colours';
+
+.oisterwijk {
+    margin: 70px auto;
+    width: 80%;
+    color: colours.$primary;
+    font-size: 16px;
+
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase; 
+        text-align: center;  
+        margin-bottom: 10px;
+    }
+
+    &__secondary {
+        text-transform: uppercase;  
+        font-style: italic;
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &__snippet {
+        font-size: 20px;
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    &__spacer {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    &__item1,
+    &__item2,
+    &__item3,
+    &__item4,
+    &__item5,
+    &__item6 {
+    margin: 20px 0; 
+    }
+
+    &__photos {
+        margin: 30px 0;
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;    
+        background-color: colours.$backgroundimg;
+    }
+
+    &__tag {
+        text-align: center;
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    &__info{
+      background-color:  rgb(245, 245, 241);
+      padding: 10px;
+    }
+    
+    &__map {
+        filter:brightness(90%);
+        text-align: center;
+    
+    }
+
+    &__mapsmall {
+      width: 100%;
+      margin: 10px auto;
+      border: 1px solid colours.$primary;
+    }
+
+    &__button {
+      background-color: white;
+      border: 2px solid rgb(161, 158, 158);
+      padding: 3px 6px;
+      margin: 0;
+      font-family: basics.$font-main;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+      color: rgb(116, 113, 113);
+      cursor: pointer;
+    }
+
+    &__button:hover {
+      background-color: colours.$primary;
+      color: white;
+      border: 2px solid white;
+    }
+
+    &__button:active {
+      background-color: colours.$primary;
+      border: 2px solid white;
+      color: white;
+  }
+
+    &__link {
+      text-decoration: none;
+  }
+
+    &__link:visited {
+      text-decoration: none;
+      color: rgb(116, 113, 113);
+    }
+
+    &__table {
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    &__heading {
+      text-align: left;
+      padding: 5px;
+    }
+
+    &__data {
+      padding: 5px 5px 5px 10px;
+    }
+
+    &__icon {
+      width: 15px;
+    }
+
+    &__overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 20;
+    }
+
+    &__overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    &__popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      width: 80%;
+      height: 600px;
+      position: relative;
+      transition: all 5s ease-in-out;
+    }
+    
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    &__popup &__close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: colours.$primary;
+    }
+    &__popup &__close:hover {
+      color: #969696;
+    }
+    .popup .content {
+      max-height: 100%;
+      overflow: auto;
+    }
+
+    
+}
+
+@media screen and (min-width:700px) {
+    .oisterwijk {
+        max-width: 1200px;
+        font-size: 18px;
+        margin: 100px auto;
+    
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            width: 60%;
+            margin: auto;
+        }
+    
+        &__secondary {
+            font-size: 20px;
+        }
+    
+        &__snippet {
+            font-size: 22px;
+            margin: 100px 0;
+        }
+    
+        &__item1,
+        &__item2,
+        &__item3,
+        &__item4,
+        &__item5,
+        &__item6 {
+            position: relative;
+            overflow: hidden; 
+            margin:0;
+        }
+    
+        &__photos {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 500px 350px 350px 500px;
+            gap: 20px;
+            margin: 50px 0; 
+            background-color: colours.$backgroundimg;
+        }
+    
+        &__photo {
+            width: 100%;
+            transition: all 0.3s ease; 
+        }
+    
+        &__tag {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+    
+        &__item1:hover &__tag,
+        &__item2:hover &__tag,
+        &__item3:hover &__tag,
+        &__item4:hover &__tag,
+        &__item5:hover &__tag,
+        &__item6:hover &__tag {
+            transform: translateY(-100%);
+        }
+
+        &__item1 {
+            grid-column: 1/4;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        &__item2 {
+            grid-column: 1/2;
+            display: flex;
+            align-items: center;
+        }
+
+        &__item3 {
+            grid-column: 2/4;
+            display: flex;
+            align-items: center;
+        }
+
+        &__item4 {
+            grid-column: 1/3;
+            display: flex;
+            align-items: center;
+        }
+
+        &__item5 {
+            grid-column: 3/4;
+            display: flex;
+            align-items: center;
+        }
+
+        &__item6 {
+            grid-column: 1/4;
+            display: flex;
+            align-items: center;
+        }     
+
+}
+}
+
+@media screen and (min-width:1000px) {
+  .oisterwijk {
+    &__info {
+      max-width: 1000px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+     }
+  }
+}

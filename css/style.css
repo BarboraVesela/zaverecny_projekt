@@ -10,6 +10,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  color: #202020;
 }
 
 .header {
@@ -32,13 +33,6 @@ body {
   position: absolute;
   justify-content: stretch;
   align-items: center;
-  /*
-  	&__logo {
-  		position: absolute;
-  		opacity: 0;
-  		padding: 0;
-  		border: none;
-  	}*/
 }
 .menu__checkbox {
   position: absolute;
@@ -85,7 +79,7 @@ body {
   z-index: 15;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 700px) {
   .header {
     display: flex;
     align-items: center;
@@ -145,7 +139,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: #202020;
     opacity: 0;
     transition: opacity 300ms, transform 300ms;
     transform: scale(0);
@@ -156,12 +150,28 @@ body {
     transform: translate3d(0, 0.2em, 0);
     transform: scale(1);
   }
+  .menu__item--active {
+    position: relative;
+  }
+  .menu__item--active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #202020;
+  }
 }
 .glide {
   height: 250px;
+  width: 100%;
 }
 .glide__slides {
-  margin: 0;
+  margin: auto;
+}
+.glide__slide {
+  margin: auto;
 }
 .glide__article1 {
   display: flex;
@@ -169,8 +179,8 @@ body {
   align-items: flex-end;
   text-align: center;
   height: 250px;
-  width: 100%;
   background-image: url("/images/jmt/cathedral.jpg");
+  background-color: rgb(236, 236, 230);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -181,8 +191,8 @@ body {
   align-items: flex-end;
   text-align: center;
   height: 250px;
-  width: 100%;
   background-image: url("/images/bt/berglake.jpg");
+  background-color: rgb(236, 236, 230);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,16 +203,16 @@ body {
   align-items: flex-end;
   text-align: center;
   height: 250px;
-  width: 100%;
   background-image: url("/images/netherlands/oisterwijkdark.jpg");
+  background-color: rgb(236, 236, 230);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .glide__bar {
   background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
   margin-bottom: 35px;
+  width: 100%;
 }
 .glide__button {
   background-color: rgba(252, 249, 249, 0.2);
@@ -216,7 +226,7 @@ body {
   color: #fff;
 }
 .glide__button:active {
-  background-color: black;
+  background-color: #202020;
 }
 .glide__secondary {
   color: white;
@@ -378,8 +388,7 @@ body {
 @media screen and (min-width: 480px) {
   .glide {
     height: 650px;
-    max-width: 2300px;
-    margin: auto;
+    max-width: 100%;
   }
   .glide__slides {
     margin: 0;
@@ -390,7 +399,6 @@ body {
     align-items: flex-end;
     text-align: center;
     height: 650px;
-    width: 100%;
     background-image: url("/images/jmt/cathedral.jpg");
     background-position: center top;
     background-repeat: no-repeat;
@@ -402,7 +410,6 @@ body {
     align-items: flex-end;
     text-align: center;
     height: 650px;
-    width: 100%;
     background-image: url("/images/bt/berglake.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -414,7 +421,6 @@ body {
     align-items: flex-end;
     text-align: center;
     height: 650px;
-    width: 100%;
     background-image: url("/images/netherlands/oisterwijkdark.jpg");
     background-position: center top;
     background-repeat: no-repeat;
@@ -438,12 +444,86 @@ body {
     transition-duration: 0.4s;
   }
   .glide__button:hover {
-    background-color: black;
+    background-color: #202020;
   }
   .glide__secondary {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+  }
+  .glide__arrow {
+    position: absolute;
+    display: block;
+    top: 50%;
+    z-index: 2;
+    color: white;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+  .glide__arrow:focus {
+    outline: none;
+  }
+  .glide__arrow:hover {
+    border-color: white;
+  }
+  .glide__arrow--left {
+    left: 2em;
+  }
+  .glide__arrow--right {
+    right: 2em;
+  }
+  .glide__arrow--disabled {
+    opacity: 0.33;
+  }
+  .glide__bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: 2em;
+    left: 50%;
+    display: inline-flex;
+    list-style: none;
+    transform: translateX(-50%);
+  }
+  .glide__bullet {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0.25em;
+  }
+  .glide__bullet:focus {
+    outline: none;
+  }
+  .glide__bullet:hover, .glide .glide__bullet:focus {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .glide__bullet--active {
+    background-color: white;
+  }
+  .glide--swipeable {
+    cursor: grab;
+    cursor: -webkit-grab;
+  }
+  .glide--dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
   }
 }
 .hero {
@@ -521,6 +601,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgb(116, 113, 113);
+  cursor: pointer;
 }
 .highlights__button:active {
   background-color: #202020;
@@ -576,6 +657,7 @@ body {
     position: relative;
     padding: 5px 0;
     margin: 0;
+    cursor: pointer;
   }
   .highlights__text {
     margin-top: 5px;
@@ -590,7 +672,7 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: black;
+    background-color: #202020;
     opacity: 0;
     transition: opacity 300ms, transform 300ms;
     transform: scale(0);
@@ -632,6 +714,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgb(116, 113, 113);
+  cursor: pointer;
 }
 .contact__button:active {
   background-color: #202020;
@@ -646,7 +729,7 @@ input, textarea {
   font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 900px) {
   .contact {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
@@ -673,7 +756,7 @@ input, textarea {
     justify-items: center;
   }
   .contact__button:hover {
-    background-color: black;
+    background-color: #202020;
     color: white;
     border: 2px solid white;
   }
@@ -705,7 +788,7 @@ input, textarea {
   padding: 40px 0;
 }
 .aboutme__content {
-  height: 460px;
+  height: 480px;
   background-color: white;
   width: 80%;
   margin: auto;
@@ -732,6 +815,7 @@ input, textarea {
 .aboutme__title {
   text-transform: uppercase;
   font-size: 20px;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 400px) {
@@ -739,13 +823,13 @@ input, textarea {
     height: 600px;
   }
   .aboutme__content {
-    height: 390px;
+    height: 420px;
     width: 80%;
   }
 }
 @media screen and (min-width: 500px) {
   .aboutme__photo {
-    width: 200px;
+    width: 190px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -763,8 +847,6 @@ input, textarea {
     display: grid;
     grid-template-columns: repeat(autofill minmax(50px, 1fr));
     grid-template-rows: repeat(autofill, 1fr);
-    /*grid-template-columns: 1fr repeat(5, minmax(120px, 1fr)) 1fr;/*repeat(7, minmax(150px, 1fr));*/
-    /* grid-template-rows: 100px repeat(5, 100px) 100px;*/
     background-image: none;
     background-color: rgb(236, 236, 230);
     margin-top: 0;
@@ -785,7 +867,6 @@ input, textarea {
     margin-top: 0;
     margin-bottom: 10px;
     font-weight: 500;
-    letter-spacing: 2px;
   }
   .aboutme__photo {
     width: 100%;
@@ -795,14 +876,11 @@ input, textarea {
     grid-row: 2/5;
     border-radius: 2%;
     border: 4px solid white;
+    background-color: rgb(236, 236, 230);
   }
 }
 .world {
   padding: 10px;
-  /*
-      &__triangle {
-          display: none;
-      }*/
 }
 .world__banner {
   display: flex;
@@ -813,7 +891,7 @@ input, textarea {
 }
 .world__title {
   margin: auto;
-  color: black;
+  color: #202020;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 28px;
@@ -830,7 +908,7 @@ input, textarea {
   content: "";
   display: block;
   width: 100%;
-  background-color: black;
+  background-color: #202020;
   height: 2px;
   margin-top: 5px;
 }
@@ -858,9 +936,10 @@ input, textarea {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
+  cursor: pointer;
 }
 .world__button:active {
-  background-color: black;
+  background-color: #202020;
 }
 .world__link {
   text-decoration: none;
@@ -881,49 +960,36 @@ input, textarea {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 .world__cwt {
   background-image: url("/images/cwt/cwtcover.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 .world__jmt {
   background-image: url("/images/jmt/garnet.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 .world__bryce {
   background-image: url("/images/usa/bryce2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 
 @media screen and (min-width: 480px) {
   .world {
-    max-width: 1400px;
+    max-width: 1100px;
     padding: 0;
     margin: auto;
     padding: 0 40px;
-    /*
-      &__triangle {
-          position: absolute;
-          display: revert;
-    max-width: 69px;
-    z-index: 10;
-    margin-top: -185px;
-    left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
-          fill: white;
-      }*/
-    /*&__article {
-        flex-grow: 0 1 auto;
-        min-width: ;
-    }*/
   }
   .world__banner {
     height: 120px;
@@ -944,7 +1010,7 @@ input, textarea {
     font-weight: 400;
     font-size: 16px;
     margin: 10px 0;
-    color: black;
+    color: #202020;
   }
   .world__row {
     display: grid;
@@ -964,18 +1030,11 @@ input, textarea {
     transition: all 0.6s;
   }
   .world__button:hover {
-    background-color: black;
+    background-color: #202020;
   }
 }
 .gear {
   padding: 10px;
-  /*
-      &__bryce {
-          background-image: url('/images/usa/bryce2.jpg');
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-      }*/
 }
 .gear__banner {
   display: flex;
@@ -986,7 +1045,7 @@ input, textarea {
 }
 .gear__title {
   margin: auto;
-  color: black;
+  color: #202020;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 28px;
@@ -1002,7 +1061,7 @@ input, textarea {
   content: "";
   display: block;
   width: 100%;
-  background-color: black;
+  background-color: #202020;
   height: 2px;
   margin-top: 5px;
 }
@@ -1030,9 +1089,10 @@ input, textarea {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
+  cursor: pointer;
 }
 .gear__button:active {
-  background-color: black;
+  background-color: #202020;
 }
 .gear__headline {
   color: white;
@@ -1045,43 +1105,29 @@ input, textarea {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 .gear__tent {
   background-image: url("/images/gear/tent.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 .gear__inreach {
   background-image: url("/images/gear/garmin.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(236, 236, 230);
 }
 
 @media screen and (min-width: 480px) {
   .gear {
-    max-width: 1400px;
+    max-width: 1100px;
     padding: 0;
     margin: auto;
     padding: 0 40px;
-    /*
-      &__triangle {
-          position: absolute;
-          display: revert;
-    max-width: 69px;
-    z-index: 10;
-    margin-top: -185px;
-    left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
-          fill: white;
-      }*/
-    /*&__article {
-        flex-grow: 0 1 auto;
-        min-width: ;
-    }*/
   }
   .gear__banner {
     height: 120px;
@@ -1102,7 +1148,7 @@ input, textarea {
     font-weight: 400;
     font-size: 16px;
     margin: 10px 0;
-    color: black;
+    color: #202020;
   }
   .gear__row {
     display: grid;
@@ -1122,11 +1168,481 @@ input, textarea {
     transition: all 0.6s;
   }
   .gear__button:hover {
-    background-color: black;
+    background-color: #202020;
+  }
+}
+.directoryworld {
+  padding: 10px;
+}
+.directoryworld__banner {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  height: 60px;
+}
+.directoryworld__title {
+  margin: auto;
+  color: #202020;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+}
+.directoryworld__secondary {
+  margin: auto;
+  color: #202020;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 40px 0 20px 0;
+}
+.directoryworld__section {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 20px 0 5px 0;
+  margin-bottom: 5px;
+}
+.directoryworld__section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #202020;
+  height: 2px;
+  margin-top: 5px;
+}
+.directoryworld__article {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+.directoryworld__bar {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 35px 0;
+}
+.directoryworld__button {
+  background-color: rgba(252, 249, 249, 0.2);
+  border: 2px solid #fff;
+  padding: 3px 6px;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.directoryworld__button:active {
+  background-color: #202020;
+}
+.directoryworld__link {
+  text-decoration: none;
+  color: white;
+}
+.directoryworld__link:visited {
+  text-decoration: none;
+  color: white;
+}
+.directoryworld__headline {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+.directoryworld__berglake {
+  background-image: url("/images/bt/berglake.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.directoryworld__cwt {
+  background-image: url("/images/cwt/cwtcover.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.directoryworld__jmt {
+  background-image: url("/images/jmt/garnet.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.directoryworld__bryce {
+  background-image: url("/images/usa/bryce2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+
+@media screen and (min-width: 480px) {
+  .directoryworld {
+    max-width: 1100px;
+    padding: 0;
+    margin: auto;
+    padding: 0 40px;
+  }
+  .directoryworld__banner {
+    height: 120px;
+    padding-top: 40px;
+  }
+  .directoryworld__content {
+    margin-bottom: 40px;
+  }
+  .directoryworld__background {
+    position: relative;
+  }
+  .directoryworld__title {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .directoryworld__section {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #202020;
+  }
+  .directoryworld__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .directoryworld__section::after {
+    width: 15%;
+  }
+  .directoryworld__article {
+    min-height: 220px;
+    margin: 0;
+  }
+  .directoryworld__article:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s;
+  }
+  .directoryworld__button:hover {
+    background-color: #202020;
+  }
+}
+.directorynl {
+  padding: 10px;
+}
+.directorynl__banner {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  height: 60px;
+}
+.directorynl__title {
+  margin: auto;
+  color: #202020;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+}
+.directorynl__section {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 20px 0 5px 0;
+  margin-bottom: 5px;
+}
+.directorynl__section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #202020;
+  height: 2px;
+  margin-top: 5px;
+}
+.directorynl__article {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+.directorynl__bar {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 35px 0;
+}
+.directorynl__button {
+  background-color: rgba(252, 249, 249, 0.2);
+  border: 2px solid #fff;
+  padding: 3px 6px;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.directorynl__button:active {
+  background-color: #202020;
+}
+.directorynl__link {
+  text-decoration: none;
+  color: white;
+}
+.directorynl__link:visited {
+  text-decoration: none;
+  color: white;
+}
+.directorynl__headline {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+.directorynl__oisterwijk {
+  background-image: url("/images/netherlands/oisterwijkdark.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.directorynl__schoorl {
+  background-image: url("/images/netherlands/schoorl3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.directorynl__hoogeveluwe {
+  background-image: url("/images/netherlands/veluwe.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.directorynl__veluwezoom {
+  background-image: url("/images/netherlands/veluwezoom.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+
+@media screen and (min-width: 480px) {
+  .directorynl {
+    max-width: 1100px;
+    padding: 0;
+    margin: auto;
+    padding: 0 40px;
+  }
+  .directorynl__banner {
+    height: 120px;
+    padding-top: 40px;
+  }
+  .directorynl__content {
+    margin-bottom: 40px;
+  }
+  .directorynl__background {
+    position: relative;
+  }
+  .directorynl__title {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .directorynl__section {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #202020;
+  }
+  .directorynl__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .directorynl__section::after {
+    width: 15%;
+  }
+  .directorynl__article {
+    min-height: 220px;
+    margin: 0;
+  }
+  .directorynl__article:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s;
+  }
+  .directorynl__button:hover {
+    background-color: #202020;
+  }
+}
+.nl {
+  padding: 10px;
+}
+.nl__banner {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  height: 60px;
+}
+.nl__title {
+  margin: auto;
+  color: #202020;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+}
+.nl__section {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 20px 0 5px 0;
+  margin-bottom: 5px;
+}
+.nl__section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #202020;
+  height: 2px;
+  margin-top: 5px;
+}
+.nl__article {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+.nl__bar {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 35px 0;
+}
+.nl__button {
+  background-color: rgba(252, 249, 249, 0.2);
+  border: 2px solid #fff;
+  padding: 3px 6px;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.nl__button:active {
+  background-color: #202020;
+}
+.nl__link {
+  text-decoration: none;
+  color: white;
+}
+.nl__link:visited {
+  text-decoration: none;
+  color: white;
+}
+.nl__headline {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+.nl__oisterwijk {
+  background-image: url("/images/netherlands/oisterwijkdark.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.nl__schoorl {
+  background-image: url("/images/netherlands/schoorl3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.nl__hoogeveluwe {
+  background-image: url("/images/netherlands/veluwe.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+.nl__veluwezoom {
+  background-image: url("/images/netherlands/veluwezoom.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(236, 236, 230);
+}
+
+@media screen and (min-width: 480px) {
+  .nl {
+    max-width: 1100px;
+    padding: 0;
+    margin: auto;
+    padding: 0 40px;
+  }
+  .nl__banner {
+    height: 120px;
+    padding-top: 40px;
+  }
+  .nl__content {
+    margin-bottom: 40px;
+  }
+  .nl__background {
+    position: relative;
+  }
+  .nl__title {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .nl__section {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #202020;
+  }
+  .nl__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .nl__section::after {
+    width: 15%;
+  }
+  .nl__article {
+    min-height: 220px;
+    margin: 0;
+  }
+  .nl__article:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s;
+  }
+  .nl__button:hover {
+    background-color: #202020;
   }
 }
 .jmt {
-  margin: 30px auto;
+  margin: 70px auto;
   width: 80%;
   color: #202020;
   font-size: 16px;
@@ -1163,6 +1679,7 @@ input, textarea {
 .jmt__photo {
   width: 100%;
   display: block;
+  background-color: rgb(236, 236, 230);
 }
 .jmt__tag {
   text-align: center;
@@ -1170,16 +1687,17 @@ input, textarea {
   padding: 5px 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1300px) {
   .jmt {
+    max-width: 1200px;
     font-size: 18px;
-    margin: 60px auto;
+    margin: 100px auto;
   }
   .jmt__title {
     font-size: 32px;
   }
   .jmt__text {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
   .jmt__secondary {
@@ -1187,6 +1705,7 @@ input, textarea {
   }
   .jmt__snippet {
     font-size: 22px;
+    margin: 100px 0;
   }
   .jmt__item1, .jmt__item2, .jmt__item3, .jmt__item4, .jmt__item5, .jmt__item6 {
     position: relative;
@@ -1196,7 +1715,7 @@ input, textarea {
   .jmt__photos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 600px 450px 450px 600px;
+    grid-template-rows: 650px 450px 450px 650px;
     gap: 20px;
     margin: 50px 0;
   }
@@ -1247,5 +1766,479 @@ input, textarea {
     grid-column: 1/4;
     display: flex;
     align-items: center;
+  }
+}
+.oisterwijk {
+  margin: 70px auto;
+  width: 80%;
+  color: #202020;
+  font-size: 16px;
+}
+.oisterwijk__title {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.oisterwijk__secondary {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+.oisterwijk__snippet {
+  font-size: 20px;
+  text-align: center;
+  margin: 40px 0;
+}
+.oisterwijk__spacer {
+  text-align: center;
+  margin: 30px 0;
+}
+.oisterwijk__item1, .oisterwijk__item2, .oisterwijk__item3, .oisterwijk__item4, .oisterwijk__item5, .oisterwijk__item6 {
+  margin: 20px 0;
+}
+.oisterwijk__photos {
+  margin: 30px 0;
+}
+.oisterwijk__photo {
+  width: 100%;
+  display: block;
+  background-color: rgb(236, 236, 230);
+}
+.oisterwijk__tag {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
+}
+.oisterwijk__info {
+  background-color: rgb(245, 245, 241);
+  padding: 10px;
+}
+.oisterwijk__map {
+  filter: brightness(90%);
+  text-align: center;
+}
+.oisterwijk__mapsmall {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid #202020;
+}
+.oisterwijk__button {
+  background-color: white;
+  border: 2px solid rgb(161, 158, 158);
+  padding: 3px 6px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: rgb(116, 113, 113);
+  cursor: pointer;
+}
+.oisterwijk__button:hover {
+  background-color: #202020;
+  color: white;
+  border: 2px solid white;
+}
+.oisterwijk__button:active {
+  background-color: #202020;
+  border: 2px solid white;
+  color: white;
+}
+.oisterwijk__link {
+  text-decoration: none;
+}
+.oisterwijk__link:visited {
+  text-decoration: none;
+  color: rgb(116, 113, 113);
+}
+.oisterwijk__table {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.oisterwijk__heading {
+  text-align: left;
+  padding: 5px;
+}
+.oisterwijk__data {
+  padding: 5px 5px 5px 10px;
+}
+.oisterwijk__icon {
+  width: 15px;
+}
+.oisterwijk__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 20;
+}
+.oisterwijk__overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.oisterwijk__popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 600px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.oisterwijk .popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.oisterwijk__popup .oisterwijk__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #202020;
+}
+.oisterwijk__popup .oisterwijk__close:hover {
+  color: #969696;
+}
+.oisterwijk .popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media screen and (min-width: 700px) {
+  .oisterwijk {
+    max-width: 1200px;
+    font-size: 18px;
+    margin: 100px auto;
+  }
+  .oisterwijk__title {
+    font-size: 32px;
+  }
+  .oisterwijk__text {
+    width: 60%;
+    margin: auto;
+  }
+  .oisterwijk__secondary {
+    font-size: 20px;
+  }
+  .oisterwijk__snippet {
+    font-size: 22px;
+    margin: 100px 0;
+  }
+  .oisterwijk__item1, .oisterwijk__item2, .oisterwijk__item3, .oisterwijk__item4, .oisterwijk__item5, .oisterwijk__item6 {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
+  .oisterwijk__photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 500px 350px 350px 500px;
+    gap: 20px;
+    margin: 50px 0;
+    background-color: rgb(236, 236, 230);
+  }
+  .oisterwijk__photo {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  .oisterwijk__tag {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  .oisterwijk__item1:hover .oisterwijk__tag, .oisterwijk__item2:hover .oisterwijk__tag, .oisterwijk__item3:hover .oisterwijk__tag, .oisterwijk__item4:hover .oisterwijk__tag, .oisterwijk__item5:hover .oisterwijk__tag, .oisterwijk__item6:hover .oisterwijk__tag {
+    transform: translateY(-100%);
+  }
+  .oisterwijk__item1 {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+  }
+  .oisterwijk__item2 {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+  }
+  .oisterwijk__item3 {
+    grid-column: 2/4;
+    display: flex;
+    align-items: center;
+  }
+  .oisterwijk__item4 {
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+  }
+  .oisterwijk__item5 {
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+  }
+  .oisterwijk__item6 {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .oisterwijk__info {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+.glider-contain {
+  width: 100%;
+  height: 250px !important;
+  position: relative;
+}
+
+.glider-next {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  z-index: 10;
+  color: white;
+  border-radius: 4px;
+  opacity: 0.6;
+  transform: scale(0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  line-height: 1;
+}
+
+.glider-prev {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  z-index: 10;
+  color: white;
+  border-radius: 4px;
+  opacity: 0.6;
+  transform: scale(0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  line-height: 1;
+}
+
+.glider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: white;
+  opacity: 0.8;
+  transform: scale(0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  line-height: 1;
+}
+
+.glider-dot.active {
+  background-color: white;
+}
+
+.glider__article1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 250px !important;
+  background-image: url("/images/jmt/cathedral.jpg");
+  background-color: rgb(236, 236, 230);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.glider__article2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 250px !important;
+  background-image: url("/images/bt/berglake.jpg");
+  background-color: rgb(236, 236, 230);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.glider__article3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 250px !important;
+  background-image: url("/images/netherlands/oisterwijkdark.jpg");
+  background-color: rgb(236, 236, 230);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.glider__bar {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.glider__button {
+  background-color: rgba(252, 249, 249, 0.2);
+  border: 2px solid #fff;
+  padding: 3px 6px;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.glider__button:active {
+  background-color: #202020;
+}
+
+.glider__secondary {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 480px) {
+  .glider-contain {
+    height: 650px !important;
+    width: 100%;
+  }
+  .glider__slides {
+    margin: 0;
+    width: 100%;
+  }
+  .glider-next {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    z-index: 10;
+    color: white;
+    border-radius: 4px;
+    opacity: 0.6;
+    transform: scale(0.8);
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    line-height: 1;
+  }
+  .glider-prev {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    z-index: 10;
+    color: white;
+    border-radius: 4px;
+    opacity: 0.6;
+    transform: scale(0.8);
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    line-height: 1;
+  }
+  .glider-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    color: white;
+    opacity: 0.8;
+    transform: scale(0.8);
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    line-height: 1;
+  }
+  .glider-dot.active {
+    background-color: white;
+  }
+  .glider__article1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 650px !important;
+    background-image: url("/images/jmt/cathedral.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+  .glider__article2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 650px !important;
+    background-image: url("/images/bt/berglake.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .glider__article3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 650px !important;
+    background-image: url("/images/netherlands/oisterwijkdark.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .glider__bar {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-bottom: 150px;
+  }
+  .glider__button {
+    background-color: rgba(252, 249, 249, 0.2);
+    border: 3px solid #fff;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  .glider__button:hover {
+    background-color: #202020;
+  }
+  .glider__secondary {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 }/*# sourceMappingURL=style.css.map */

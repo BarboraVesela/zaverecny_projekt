@@ -14,7 +14,7 @@
 
     &__title {
         margin: auto;
-        color: black;
+        color: colours.$primary;
         text-transform: uppercase;
         font-weight: 400;
         font-size: 28px;
@@ -32,7 +32,7 @@
         content: "";
 	    display: block; 
 	    width: 100%; 
-        background-color: black;
+        background-color: colours.$primary;
         height: 2px; 
         margin-top: 5px; 
     }
@@ -63,10 +63,11 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: #fff;
+        cursor: pointer;
         }
 
         &__button:active {
-        background-color: black;
+        background-color: colours.$primary;
         }
 
     &__headline {
@@ -81,6 +82,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: colours.$backgroundimg;
     }
 
     &__tent {
@@ -88,6 +90,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: colours.$backgroundimg;
     }
 
     &__inreach {
@@ -95,21 +98,16 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: colours.$backgroundimg;
     }
-/*
-    &__bryce {
-        background-image: url('/images/usa/bryce2.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }*/
+    
 }
 
 
 @media screen and (min-width: 480px) {
 
     .gear {
-        max-width: 1400px;
+        max-width: 1100px;
         padding: 0;
         margin: auto;
         padding: 0 40px;
@@ -127,20 +125,6 @@
         position: relative;
     }
 
-    /*
-    &__triangle {
-        position: absolute;
-        display: revert;
-		max-width: 69px;
-		z-index: 10;
-		margin-top: -185px;
-		left:0;
-		right:0;
-		margin-left:auto;
-		margin-right:auto;
-        fill: white;
-    }*/
-
     &__title {
         font-weight: 500;
         font-size: 32px;
@@ -151,7 +135,7 @@
         font-weight: 400;
         font-size: 16px;
         margin: 10px 0;
-        color: black;
+        color: colours.$primary;
     }
 
     &__row {
@@ -176,13 +160,8 @@
     }
 
     &__button:hover {
-        background-color: black;
+        background-color: colours.$primary;
     }
-
-    /*&__article {
-        flex-grow: 0 1 auto;
-        min-width: ;
-    }*/
     }
 
 }

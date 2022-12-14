@@ -2,8 +2,24 @@
 layout: layouts/main.njk
 title: Homepage
 ---
+{% include 'partials/glider.njk' %}
 
-{% include 'partials/slider.njk' %}
+<script src="glider.min.js"></script>
+
+    <script>
+
+       new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1,
+            draggable: true,
+            dots: '#dots',
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+        })
+    
+    </script>
+<!--{% include 'partials/slider.njk' %}
    
         <script src="js/glide.min.js"></script>
 
@@ -13,8 +29,8 @@ title: Homepage
 			perView: 1,
 			type: 'carousel',
 		}).mount()
-	  </script>
-      
-   {% include 'partials/hero.njk' %}
-   {% include 'partials/highlights.njk' %}
-   {% include 'partials/form.njk' %}
+	  </script>-->
+    
+{% include 'partials/hero.njk' %}
+{% include 'partials/highlights.njk' %}
+{% include 'partials/form.njk' %}
